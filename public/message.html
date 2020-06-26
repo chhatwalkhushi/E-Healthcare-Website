@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+           background: url('back1.jpg') no-repeat;
+           background-size: cover;
+           height: 100vh;
+       }
+
+       h2 {
+           text-align: center;
+           font-family: 'Pacifico';
+           color: white;
+           margin: 80px 0;
+           letter-spacing: 1px;
+           word-spacing: 6px;
+       }
+       .bold {
+           font-family: 'Arial';
+           font-size: 40px;
+           text-shadow: 3px 3px 6px white ;
+       }
+       .box {
+           width: 40%;
+           margin: 0 auto;
+           background: rgba(255,255,255,0.25);
+           padding: 35px;
+           border: 2px solid #fff;
+           border-radius: 20px/50px;
+           background-clip: padding-box;
+           text-align: center;
+       }
+
+       .button {
+           font-size: 1em;
+           padding: 10px;
+           color: #fff;
+           border: 2px solid white;
+           border-radius: 20px/50px;
+           text-decoration: none;
+           cursor: pointer;
+           transition: all 0.3s ease-out;
+       }
+       .button:hover {
+           background: darkblue;
+       }
+
+       .overlay {
+           position: fixed;
+           top: 50px;
+           bottom: 50px;
+           left: 170px;
+           right: 170px;
+           background: rgba(0, 0, 0, 0.9);
+           transition: opacity 500ms;
+           visibility: hidden;
+           opacity: 0;
+       }
+       .overlay:target {
+           visibility: visible;
+           opacity: 1;
+       }
+
+       .Popup {
+           margin: 70px auto;
+           padding-bottom: 20px;
+           background: white;
+           border-bottom-right-radius: 5px;
+           width: 30%;
+           position: relative;
+           transition: all 5s ease-in-out;
+       }
+
+       .popup h1 {
+           margin-top: 50px;
+           text-align: center;
+           color: yellow;
+           text-shadow: 3px 3px 6px yellow;
+           font-family: 'Pacifico';
+           letter-spacing: 1px;
+           word-spacing: 10px;
+       }
+       .popup .close {
+           position: absolute;
+           top: 20px;
+           right: 30px;
+           transition: all 200ms;
+           font-size: 30px;
+           font-weight: bold;
+           text-decoration: none;
+           color: yellow;
+       }
+       .popup .close:hover {
+           color: white;
+           text-shadow: 2px 2px 4px white;
+       }
+       .popup .content {
+           margin-top: 100px;
+           max-height: 30%;
+           overflow: auto;
+           color: yellow;
+           text-align: center;
+           font-size: 20px;
+       }
+
+       .book {
+           color: white;
+           font-family: 'Pacifico';
+           letter-spacing: 1px;
+           word-spacing: 5px;
+       }
+
+       @media screen and (max-width: 700px){
+           .box{
+           width: 70%;
+           }
+           .popup{
+           width: 70%;
+           }
+       }
+    </style>
+</head>
+<body>
+    <h2><span class="bold">OOPS!!!</span><br>Seems like there are no doctors of the department you selected currently available.<br><br><span class="bold">NO WORRIES</span><br>You may try some time later or<br>Click on the button below to know more.</h2>
+   <div class="box">
+       <a class="button" href="#popup1"><i class="fa fa-hand-peace-o" aria-hidden="true">Click me</i></a>
+   </div>
+   <div id="popup1" class="overlay">
+       <div class="popup">
+       <h1>We are always with you </h1>
+       <a class="close" href="#">x</a>
+           <div class="content">
+           Doctor unavailable?<br><a href="/book1" class="book">Book an Appointment</a>
+           <br><br>
+           <a href="/covid19-2" class="book">Go Back</a>
+           <br><br>
+           <i class="fa fa-road"> Noida</i><br>
+           <i class="fa fa-phone"> 98XXXXXXXX</i><br>
+           <i class="fa fa-envelope"> ehealthcareprovider@gmail.com</i>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
